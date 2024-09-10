@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,46 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+/* Add this to the existing App.css */
+
+/* Styles for Characters List */
+
+.characters-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.character-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.character-item:hover {
+  transform: scale(1.05);
+}
+
+.character-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.character-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .characters-list {
+    grid-template-columns: 1fr;
   }
 }
